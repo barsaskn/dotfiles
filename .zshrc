@@ -33,7 +33,6 @@ bindkey "^[[3~" delete-char
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export LFS=/mnt/lfs
 
 #################  NEOFETCH  #################  
 
