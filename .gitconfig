@@ -1,0 +1,5 @@
+[user]
+	email = barisaskin09@gmail.com
+	name = barsaskn
+[alias]
+	tree = log --graph --decorate --oneline
