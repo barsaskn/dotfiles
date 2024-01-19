@@ -57,8 +57,8 @@ print_error() {
     # Print parameters in red
     echo -e "\e[31mFiles $param1 and $param2 are different\e[0m"
 }
-localfiles=("${HOME}/.zshrc" "${HOME}/.zshenv" "${HOME}/.vimrc" "${HOME}/.tmux.conf" "${HOME}/.gitconfig")
-repofiles=("./.zshrc" "./.zshenv" "./.vimrc" "./.tmux.conf" "./.gitconfig")
+localfiles=("${HOME}/.zshrc" "${HOME}/.zshenv" "${HOME}/.vimrc" "${HOME}/.tmux.conf" "${HOME}/.gitconfig" "${HOME}/.config/Code/User/settings.json" "${HOME}/.config/neofetch/config.conf" "${HOME}/.config/terminator/config")
+repofiles=("./.zshrc" "./.zshenv" "./.vimrc" "./.tmux.conf" "./.gitconfig" "./.config/Code/User/settings.json" "./.config/neofetch/config.conf" "./.config/terminator/config")
 
 for ((i=0; i<${#localfiles[@]}; i++)); do
     check_md5 ${localfiles[i]} ${repofiles[i]}
