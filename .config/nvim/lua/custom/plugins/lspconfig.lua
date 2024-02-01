@@ -3,7 +3,7 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "gopls", "clangd", "bash-language-server" }
+local servers = { "gopls", "clangd", "bash-language-server", "pyright", "tsserver" }
 
 lspconfig.clangd.setup {
   on_attach = on_attach,
@@ -20,10 +20,20 @@ lspconfig.bashls.setup {
   capabilities = capabilities,
 }
 
+lspconfig.pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+
 return {
   "neovim/nvim-lspconfig",
    config = function()
       require "plugins.configs.lspconfig"
-      require "lspconfig"
    end,
 }
