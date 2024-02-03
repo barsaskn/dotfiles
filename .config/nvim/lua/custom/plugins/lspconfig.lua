@@ -3,7 +3,7 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "gopls", "clangd", "bash-language-server", "pyright", "tsserver" }
+local servers = { "gopls", "clangd", "bash-language-server", "pyright", "tsserver", "rust-analyzer" }
 
 lspconfig.clangd.setup {
   on_attach = on_attach,
@@ -30,6 +30,10 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
 
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 
 return {
   "neovim/nvim-lspconfig",
