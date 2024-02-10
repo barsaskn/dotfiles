@@ -10,6 +10,14 @@ call plug#end()
 
 set laststatus=2
 set splitbelow
+set whichwrap+=>,l
+set whichwrap+=<,h
 
-nnoremap <C-w>h <C-w>s
+colorscheme evening
 
+nnoremap <C-w>v <C-w>s
+nnoremap <C-w>h <C-w>v
+map <A-S-Left> <C-W>>
+map <A-S-Right> <C-W><
+map <A-S-Up> <C-W>+
+map <A-S-Down> <C-W>-

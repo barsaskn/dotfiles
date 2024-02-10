@@ -2,6 +2,7 @@
     "window.titleBarStyle": "custom",
     "window.restoreWindows": "none",
 
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
     "editor.fontSize": 18,
     "editor.fontWeight": "bold",
     "editor.cursorBlinking": "expand",
