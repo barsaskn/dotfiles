@@ -31,7 +31,11 @@ bindkey "^[[3~" delete-char
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-#################  NEOFETCH  #################  
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+#################  FASTFETCH  #################  
 
 if command -v fastfetch &> /dev/null; then
     fastfetch		
@@ -60,12 +64,17 @@ fi
 #################  YAZI  #################
 
 function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+	  local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	  yazi "$@" --cwd-file="$tmp"
+	  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+	      cd -- "$cwd"
+	  fi
+	  rm -f -- "$tmp"
 }
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
