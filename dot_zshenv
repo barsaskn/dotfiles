@@ -1,0 +1,12 @@
+alias ls='ls --color=auto'
+alias grep='grep --color=always'
+alias update="sudo pacman -Syu && yay -Syu"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias mkdir="mkdir -p"
+alias cat="bat"
+alias dockerclean='docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi $(docker images -aq) && docker network prune -f && docker volume prune -f'
+alias gitcred="cat ~/.gitcred"
+alias ls="eza --icons=always"
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
