@@ -13,3 +13,4 @@ g.autoformat = false
 opt.fixendofline = false
 opt.relativenumber = false
 opt.whichwrap:append('>,<,h,l')
+opt.wrap = false
