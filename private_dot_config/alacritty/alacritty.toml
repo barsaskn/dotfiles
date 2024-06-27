@@ -36,3 +36,6 @@ style = "Regular"
 [window.padding]
 x = 5
 y = 5
+
+[window]
+option_as_alt = "OnlyLeft"
