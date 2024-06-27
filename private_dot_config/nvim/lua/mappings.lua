@@ -6,8 +6,7 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map("n", "<Leader>gg", "<cmd> Glow <cr>", { desc = "Show file preview" })
 
 for i = 1, 9, 1 do
   map("n", string.format("<A-%s>", i), function()

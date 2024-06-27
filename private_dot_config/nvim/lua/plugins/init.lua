@@ -18,7 +18,11 @@ return {
   {
     "hrsh7th/nvim-cmp",
     opts = require("configs.cmp")
-  }
+  },
+  {
+    "onsails/lspkind.nvim",
+  },
+  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"}
   --
   -- {
   -- 	"williamboman/mason.nvim",
