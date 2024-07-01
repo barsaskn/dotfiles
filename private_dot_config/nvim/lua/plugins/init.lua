@@ -22,25 +22,32 @@ return {
   {
     "onsails/lspkind.nvim",
   },
-  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"}
-  --
-  -- {
-  -- 	"williamboman/mason.nvim",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"lua-language-server", "stylua",
-  -- 			"html-lsp", "css-lsp" , "prettier"
-  -- 		},
-  -- 	},
-  -- },
-  --
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "ellisonleao/glow.nvim", 
+    config = true, 
+    cmd = "Glow"
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    config = require("configs.nvimtree")
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+   	  ensure_installed = {
+   			"lua-language-server", "stylua",
+   			"html-lsp", "css-lsp" , "prettier",
+        "cmake-language-server", "pyright", "clangd"
+   		},
+   	},
+  },
+ -- {
+ --  "nvim-treesitter/nvim-treesitter",
+ --  	opts = {
+ --  		ensure_installed = {
+ --  			"vim", "lua", "vimdoc",
+ --       "html", "css", "python"
+ --     },
+ --   },
+ -- },
 }
