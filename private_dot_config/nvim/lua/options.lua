@@ -14,3 +14,7 @@ opt.fixendofline = false
 opt.relativenumber = false
 opt.whichwrap:append('>,<,h,l')
 opt.wrap = false
+
+vim.scriptencoding = "utf-8"
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
