@@ -1,12 +1,12 @@
--- This file needs to have same structure as nvconfig.lua 
+-- This file needs to have same structure as nvconfig.lua
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
 local M = {}
 
 M.ui = {
-	theme = "doomchad",
-  nvdash = {      -- Dashboard
+  theme = "doomchad",
+  nvdash = { -- Dashboard
     load_on_startup = true,
     buttons = {
       { "  Find File", "Spc f f", "Telescope find_files" },
@@ -15,15 +15,28 @@ M.ui = {
       { "  Themes", "Spc t h", "Telescope themes" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
       { "  Quit", "", "qall" },
-    }
+    },
+    header = {
+      [[                                                                       ]],
+      [[  ██████   █████                   █████   █████  ███                  ]],
+      [[ ░░██████ ░░███                   ░░███   ░░███  ░░░                   ]],
+      [[  ░███░███ ░███   ██████   ██████  ░███    ░███  ████  █████████████   ]],
+      [[  ░███░░███░███  ███░░███ ███░░███ ░███    ░███ ░░███ ░░███░░███░░███  ]],
+      [[  ░███ ░░██████ ░███████ ░███ ░███ ░░███   ███   ░███  ░███ ░███ ░███  ]],
+      [[  ░███  ░░█████ ░███░░░  ░███ ░███  ░░░█████░    ░███  ░███ ░███ ░███  ]],
+      [[  █████  ░░█████░░██████ ░░██████     ░░███      █████ █████░███ █████ ]],
+      [[ ░░░░░    ░░░░░  ░░░░░░   ░░░░░░       ░░░      ░░░░░ ░░░░░ ░░░ ░░░░░  ]],
+      [[                                                                       ]],
+      [[                     λ it be like that sometimes λ                     ]],
+    },
   },
   statusline = {
     theme = "vscode_colored",
   },
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+  -- hl_override = {
+  -- 	Comment = { italic = true },
+  -- 	["@comment"] = { italic = true },
+  -- },
 }
 
 return M
