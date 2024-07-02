@@ -11,43 +11,52 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-        require("nvchad.configs.lspconfig").defaults()
-        require "configs.lspconfig"
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
     end,
   },
   {
     "hrsh7th/nvim-cmp",
-    opts = require("configs.cmp")
+    opts = require "configs.cmp",
   },
   {
     "onsails/lspkind.nvim",
   },
   {
-    "ellisonleao/glow.nvim", 
-    config = true, 
-    cmd = "Glow"
+    "ellisonleao/glow.nvim",
+    config = true,
+    cmd = "Glow",
   },
   {
     "nvim-tree/nvim-tree.lua",
-    config = require("configs.nvimtree")
+    config = require "configs.nvimtree",
   },
   {
     "williamboman/mason.nvim",
     opts = {
-   	  ensure_installed = {
-   			"lua-language-server", "stylua",
-   			"html-lsp", "css-lsp" , "prettier",
-        "cmake-language-server", "pyright", "clangd"
-   		},
-   	},
+      ensure_installed = {
+        "lua-language-server",
+        "stylua",
+        "html-lsp",
+        "css-lsp",
+        "prettier",
+        "cmake-language-server",
+        "pyright",
+        "black",
+        "clangd",
+        "gopls",
+        "docker-compose-language-service",
+        "rust-analyzer",
+      },
+    },
   },
- -- {
- --  "nvim-treesitter/nvim-treesitter",
- --  	opts = {
- --  		ensure_installed = {
- --  			"vim", "lua", "vimdoc",
- --       "html", "css", "python"
- --     },
- --   },
- -- },
+  -- {
+  --  "nvim-treesitter/nvim-treesitter",
+  --  	opts = {
+  --  		ensure_installed = {
+  --  			"vim", "lua", "vimdoc",
+  --       "html", "css", "python"
+  --     },
+  --   },
+  -- },
 }
