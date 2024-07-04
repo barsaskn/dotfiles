@@ -1,2 +1,2 @@
 README.md
-private_dot_config/nvim/lazy-lock.json
+.config/nvim/lazy-lock.json
