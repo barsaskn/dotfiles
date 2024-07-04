@@ -75,14 +75,16 @@ return {
         group = "  "
       },
     },
-  }
-  -- {
-  --  "nvim-treesitter/nvim-treesitter",
-  --  	opts = {
-  --  		ensure_installed = {
-  --  			"vim", "lua", "vimdoc",
-  --       "html", "css", "python"
-  --     },
-  --   },
-  -- },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    	opts = {
+    		ensure_installed = {
+    			"vim", "lua", "vimdoc",
+          "html", "css", "python",
+          "cpp", "cmake", "gitignore",
+          "go", "rust", "json"
+      },
+    },
+  },
 }
