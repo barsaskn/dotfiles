@@ -68,6 +68,14 @@ return {
     },
     name = "registers",
   },
+  {
+    "folke/which-key.nvim",
+    opts = {
+      icons = {
+        group = "  "
+      },
+    },
+  }
   -- {
   --  "nvim-treesitter/nvim-treesitter",
   --  	opts = {

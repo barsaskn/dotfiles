@@ -1,8 +1,13 @@
 require "nvchad.mappings"
 
--- add yours here
-
+local wk = require("which-key")
 local map = vim.keymap.set
+
+wk.register({
+  ["<leader>f"] = {
+    name = "Find",
+  },
+})
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
