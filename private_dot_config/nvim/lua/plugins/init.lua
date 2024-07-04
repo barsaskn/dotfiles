@@ -56,8 +56,18 @@ return {
     cmd = { "TodoLocList", "TodoTelescope", "TodoQuickFix", "TodoTrouble" },
     opts = {
       signs = true,
-    }
-  }
+    },
+  },
+  {
+    "tversteeg/registers.nvim",
+    cmd = "Registers",
+    config = true,
+    keys = {
+      { '"', mode = { "n", "v" } },
+      { "<C-R>", mode = "i" },
+    },
+    name = "registers",
+  },
   -- {
   --  "nvim-treesitter/nvim-treesitter",
   --  	opts = {
