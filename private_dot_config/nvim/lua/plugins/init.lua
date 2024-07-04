@@ -83,7 +83,7 @@ return {
     			"vim", "lua", "vimdoc",
           "html", "css", "python",
           "cpp", "cmake", "gitignore",
-          "go", "rust", "json"
+          "go", "rust", "json", "make"
       },
     },
   },
