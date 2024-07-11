@@ -72,18 +72,27 @@ return {
     "folke/which-key.nvim",
     opts = {
       icons = {
-        group = "  "
+        group = "  ",
       },
     },
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    	opts = {
-    		ensure_installed = {
-    			"vim", "lua", "vimdoc",
-          "html", "css", "python",
-          "cpp", "cmake", "gitignore",
-          "go", "rust", "json", "make"
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "python",
+        "cpp",
+        "cmake",
+        "gitignore",
+        "go",
+        "rust",
+        "json",
+        "make",
       },
     },
   },
@@ -93,16 +102,24 @@ return {
     opts = {
       lsp = {
         hover = {
-          enabled = false
+          enabled = false,
         },
         signature = {
-          enabled = false
-        }
-      }
+          enabled = false,
+        },
+      },
     },
     dependencies = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
-    }
-  }
+    },
+  },
+  {
+    "rbong/vim-flog",
+    lazy = true,
+    cmd = { "Flog", "Flogsplit", "Floggit" },
+    dependencies = {
+      "tpope/vim-fugitive",
+    },
+  },
 }
