@@ -2,16 +2,25 @@
 
 autoload -U compinit && compinit -u
 
-#################  LINE  #################
+#################  PROMPT  #################
 
-precmd() {
-    local ps1='%B%F{yellow}[%n][%1~] >%f%b'
+setopt PROMPT_SUBST
+
+function _git_data {
     if command -v git &> /dev/null && git rev-parse --is-inside-work-tree &> /dev/null; then
-        local branch_name=$(git branch --show-current)
-        ps1="%B%F{yellow}[%n][%1~][$branch_name] >%f%b"
+        branch=$(git rev-parse --abbrev-ref HEAD)
+        if [ -n "$branch" ]; then
+            count=$(git diff --name-only | wc -l)
+            if [ "$count" -ne 0 ]; then
+                echo "[ $branch:  $count]"
+            else
+                echo "[ $branch]"
+            fi
+        fi
     fi
-    PS1="$ps1 "
 }
+
+PROMPT='%B%F{yellow}[%n][%1~]$(_git_data) >%f%b '
 
 ####################  HISTORY  #################
 
