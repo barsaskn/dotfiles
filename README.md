@@ -14,6 +14,7 @@ Before you start, ensure you have the following installed:
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [eza](https://github.com/eza-community/eza)
 - [alacritty](https://alacritty.org)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 
 ## Installation
 
