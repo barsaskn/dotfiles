@@ -10,12 +10,7 @@ function _git_data {
     if command -v git &> /dev/null && git rev-parse --is-inside-work-tree &> /dev/null; then
         branch=$(git rev-parse --abbrev-ref HEAD)
         if [ -n "$branch" ]; then
-            count=$(git diff --name-only | wc -l)
-            if [ "$count" -ne 0 ]; then
-                echo "[ $branch:  $count]"
-            else
-                echo "[ $branch]"
-            fi
+            echo "[ $branch]"
         fi
     fi
 }
