@@ -17,6 +17,7 @@ map("n", "<Leader>p", "<cmd> Glow <cr>", { desc = "Show file preview" })
 map("n", "<Leader>q", "<cmd> q! <cr>", { desc = "Quit" })
 map("n", "<Leader>ft", "<cmd> TodoTelescope <cr>", { desc = "Telescope Todo grep" })
 map("n", "<Leader>gg", "<cmd> LazyGit <cr>", { desc = "LazyGit" })
+map("n", "<Leader>gb", "<cmd> Flog <cr>", { desc = "Show branches" })
 map("n", "<Leader>T", "<cmd>Telescope themes<CR>", { desc = "Themes" })
 map("n", "<leader>H", "<cmd>NvCheatsheet<CR>", { desc = "toggle nvcheatsheet" })
 
