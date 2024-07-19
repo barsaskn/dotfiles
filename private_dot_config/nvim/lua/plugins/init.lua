@@ -134,4 +134,14 @@ return {
       "nvim-lua/plenary.nvim",
     },
   },
+  {
+    "f-person/git-blame.nvim",
+    cmd = {
+      "GitBlameEnable",
+    },
+    event = "VeryLazy",
+    opts = {
+      enabled = true,
+    },
+  },
 }
