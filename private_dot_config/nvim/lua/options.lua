@@ -8,6 +8,9 @@ require "nvchad.options"
 local g = vim.g
 local opt = vim.opt
 
+
+require('render-markdown').enable()
+
 g.autoformat = false
 
 opt.fixendofline = false
