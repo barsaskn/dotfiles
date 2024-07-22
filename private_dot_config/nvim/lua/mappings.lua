@@ -13,7 +13,7 @@ wk.add {
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-map("n", "<Leader>p", "<cmd> Glow <cr>", { desc = "Show file preview" })
+map("n", "<Leader>P", "<cmd> Glow <cr>", { desc = "Show file preview" })
 map("n", "<Leader>q", "<cmd> q! <cr>", { desc = "Quit" })
 map("n", "<Leader>ft", "<cmd> TodoTelescope <cr>", { desc = "Telescope Todo grep" })
 map("n", "<Leader>gg", "<cmd> LazyGit <cr>", { desc = "LazyGit" })
