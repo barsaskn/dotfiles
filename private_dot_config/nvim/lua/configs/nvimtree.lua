@@ -7,7 +7,10 @@ local options = {
         }
       }
     }
-  }
+  },
+  filters = {
+    dotfiles = false,
+  },
 }
 
 return options
