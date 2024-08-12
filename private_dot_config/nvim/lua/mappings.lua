@@ -8,6 +8,7 @@ wk.add {
   {
     { "<leader>f", group = "Find" },
     { "<leader>g", group = "Git" },
+    { "<leader>t", group = "Tab" }
   }
 }
 
@@ -20,6 +21,12 @@ map("n", "<Leader>gg", "<cmd> LazyGit <cr>", { desc = "LazyGit" })
 map("n", "<Leader>gb", "<cmd> Flog <cr>", { desc = "Show branches" })
 map("n", "<Leader>T", "<cmd>Telescope themes<CR>", { desc = "Themes" })
 map("n", "<leader>H", "<cmd>NvCheatsheet<CR>", { desc = "toggle nvcheatsheet" })
+
+map("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New tab" })
+map("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close tab" })
+map("n", "<leader>tj", "<cmd>tabnext<CR>", { desc = "Previous tab" })
+map("n", "<leader>tk", "<cmd>tabprevious<CR>", { desc = "Next tab" })
+map("n", "<leader>tl", "<cmd>tabs<CR>", { desc = "List tab" })
 
 for i = 1, 9, 1 do
   map("n", string.format("<A-%s>", i), function()
