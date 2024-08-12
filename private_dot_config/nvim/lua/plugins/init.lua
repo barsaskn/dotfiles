@@ -154,7 +154,32 @@ return {
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
     config = function()
-        require('render-markdown').setup({})
+      require("render-markdown").setup {}
     end,
+  },
+  {
+    "sontungexpt/stcursorword",
+    event = "VeryLazy",
+    config = true,
+  },
+  {
+    "mawkler/modicator.nvim",
+    dependencies = "mawkler/onedark.nvim",
+    opts = {
+      show_warnings = true,
+      integration = {
+        lualine = {
+          enabled = false,
+          highlight = "fg",
+        },
+      },
+      highlights = {
+        defaults = {
+          bold = true,
+          italic = true,
+        },
+      },
+    },
+    event = "ModeChanged",
   },
 }
