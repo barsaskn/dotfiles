@@ -29,6 +29,7 @@ setopt HIST_IGNORE_ALL_DUPS
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[3~" delete-char
+bindkey '^R' history-incremental-search-backward
 
 #################  ENV  #################  
 
