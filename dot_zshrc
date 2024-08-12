@@ -15,7 +15,7 @@ function _git_data {
     fi
 }
 
-PROMPT='%B%F{yellow}[%n][%1~]$(_git_data) >%f%b '
+PROMPT='%B%F{yellow}[%F{250}%n%f%F{yellow}][%1~]$(_git_data) >%f%b '
 
 ####################  HISTORY  #################
 
