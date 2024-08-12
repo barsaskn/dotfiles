@@ -10,7 +10,7 @@ function _git_data {
     if command -v git &> /dev/null && git rev-parse --is-inside-work-tree &> /dev/null; then
         branch=$(git rev-parse --abbrev-ref HEAD)
         if [ -n "$branch" ]; then
-            echo "[ $branch]"
+            echo "[%F{250} $branch%f%F{yellow}]"
         fi
     fi
 }
