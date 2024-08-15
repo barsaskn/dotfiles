@@ -15,7 +15,18 @@ function _git_data {
     fi
 }
 
-PROMPT='%B%F{yellow}[%F{250}%n%f%F{yellow}][%1~]$(_git_data) >%f%b '
+function _path_name {
+  case "$PWD" in
+    "$HOME") echo "󰋜" ;;
+    "$HOME/Documents") echo "󱧶" ;;
+    "$HOME/Music") echo "󱍙" ;;
+    "$HOME/Downloads") echo "󰉍" ;;
+    "$HOME/Pictures") echo "󰉏" ;;
+    *) echo  %1~ ;;
+  esac
+}
+
+PROMPT='%B%F{yellow}[%F{250} %n%f%F{yellow}][$(_path_name)]$(_git_data) >%f%b '
 
 ####################  HISTORY  #################
 
