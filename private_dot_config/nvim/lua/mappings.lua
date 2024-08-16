@@ -24,8 +24,8 @@ map("n", "<leader>H", "<cmd>NvCheatsheet<CR>", { desc = "toggle nvcheatsheet" })
 
 map("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New tab" })
 map("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close tab" })
-map("n", "<leader>tj", "<cmd>tabnext<CR>", { desc = "Previous tab" })
-map("n", "<leader>tk", "<cmd>tabprevious<CR>", { desc = "Next tab" })
+map("n", "<leader>t<Left>", "<cmd>tabnext<CR>", { desc = "Previous tab" })
+map("n", "<leader>t<Right>", "<cmd>tabprevious<CR>", { desc = "Next tab" })
 map("n", "<leader>tl", "<cmd>tabs<CR>", { desc = "List tab" })
 
 for i = 1, 9, 1 do
