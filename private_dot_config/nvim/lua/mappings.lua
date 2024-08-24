@@ -34,6 +34,9 @@ for i = 1, 9, 1 do
   end)
 end
 
+vim.api.nvim_set_keymap('n', 'j', '10j', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'k', '10k', { noremap = true, silent = true })
+
 del("n", "<leader>ma")
 del("n", "<leader>n")
 del("n", "<leader>cm")
