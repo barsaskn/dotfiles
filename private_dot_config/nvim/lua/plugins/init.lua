@@ -35,6 +35,21 @@ return {
       "MunifTanjim/nui.nvim",
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     },
+    config = {
+      window = {
+        width = 40,
+      },
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_hidden = false,
+          never_show = {
+            ".DS_Store",
+          },
+        },
+      },
+    },
     cmd = "Neotree",
   },
   {
