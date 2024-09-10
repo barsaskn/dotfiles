@@ -88,7 +88,12 @@ return {
   {
     "tversteeg/registers.nvim",
     cmd = "Registers",
-    config = true,
+    config = {
+      window = {
+        transparency = 0,
+        border = "rounded",
+      },
+    },
     keys = {
       { '"', mode = { "n", "v" } },
       { "<C-R>", mode = "i" },
