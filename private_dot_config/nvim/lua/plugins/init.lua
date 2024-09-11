@@ -27,35 +27,8 @@ return {
     cmd = "Glow",
   },
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    },
-    config = {
-      window = {
-        width = 40,
-      },
-      filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
-          hide_hidden = false,
-          never_show = {
-            ".DS_Store",
-          },
-        },
-      },
-    },
-    cmd = "Neotree",
-  },
-  {
     "nvim-tree/nvim-tree.lua",
     config = require "configs.nvimtree",
-    enabled = false,
   },
   {
     "williamboman/mason.nvim",
@@ -233,25 +206,5 @@ return {
         -- Your setup opts here (leave empty to use defaults)
       }
     end,
-  },
-  {
-    "romgrk/barbar.nvim",
-    dependencies = {
-      "lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
-      "nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
-    },
-    event = "BufEnter",
-    init = function()
-      vim.g.barbar_auto_setup = false
-    end,
-    opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-      animation = true,
-      sidebar_filetypes = {
-        ["neo-tree"] = { event = "BufWinLeave" },
-      },
-      minimum_padding = 0,
-    },
-    version = "^1.0.0", -- optional: only update when a new 1.x version is released
   },
 }

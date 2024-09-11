@@ -21,7 +21,6 @@ map("n", "<Leader>gg", "<cmd> LazyGit <cr>", { desc = "LazyGit" })
 map("n", "<Leader>gb", "<cmd> Flog <cr>", { desc = "Show branches" })
 map("n", "<Leader>T", "<cmd>Telescope themes<CR>", { desc = "Themes" })
 map("n", "<leader>H", "<cmd>NvCheatsheet<CR>", { desc = "toggle nvcheatsheet" })
-map("n", "<leader>e", "<cmd>Neotree focus<CR>", { desc = "Focus neotree" })
 
 map("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New tab" })
 map("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close tab" })
