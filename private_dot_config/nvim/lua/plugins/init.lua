@@ -28,6 +28,9 @@ return {
   },
   {
     "nvim-tree/nvim-tree.lua",
+    dependencies = {
+      "b0o/nvim-tree-preview.lua",
+    },
     config = require "configs.nvimtree",
   },
   {
