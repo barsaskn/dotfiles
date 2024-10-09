@@ -32,6 +32,8 @@ map("n", "<leader>tl", "<cmd>tabs<CR>", { desc = "List tab" })
 
 map("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
 
+map('t', '<Esc><Esc>', [[<C-\><C-n>]], { noremap = true, silent = true, desc = "Exit terminal mode" })
+
 for i = 1, 9, 1 do
   map("n", string.format("<A-%s>", i), function()
     vim.api.nvim_set_current_buf(vim.t.bufs[i])
