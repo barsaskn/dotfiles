@@ -34,11 +34,14 @@ map("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
 
 map('t', '<Esc><Esc>', [[<C-\><C-n>]], { noremap = true, silent = true, desc = "Exit terminal mode" })
 
+map("n", "<leader>b", "<cmd>Telescope buffers<CR>", { desc = "Buffer list" })
+
 for i = 1, 9, 1 do
   map("n", string.format("<A-%s>", i), function()
     vim.api.nvim_set_current_buf(vim.t.bufs[i])
   end)
 end
+
 
 map('n', 'j', '10j', { noremap = true, silent = true, desc = "Down x10" })
 map('n', 'k', '10k', { noremap = true, silent = true, desc = "Up x10" })

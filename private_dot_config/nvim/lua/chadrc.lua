@@ -7,6 +7,9 @@ local M = {}
 M.ui = {
   theme = "doomchad",
   theme_toggle = { "doomchad", "bearded-arc" },
+  tabufline = {
+    enabled = false,
+  },
   nvdash = { -- Dashboard
     load_on_startup = true,
     buttons = {
